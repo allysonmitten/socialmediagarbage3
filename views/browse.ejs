@@ -19,29 +19,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>    
 </head>
 <body>
-  <div class="container" ng-controller='browseController'>
+  <div class="container-fluid" ng-controller='browseController'>
+    <div class="container">
     <%- include nav.ejs %>
   </div>
   <div class="container browseContainer">
-    <div class="row postContainer">
       <h1>Browse</h1>
-    </div>
-    s
     <div class="row">
       <div class="container" ng-init="loadPosts()">
-        <div class="col-md-3 browseItem" ng-repeat="post in posts">
-           <img class="browseImage" src="https://i.vimeocdn.com/portrait/58832_300x300.jpg"></img>
-           <div class="row border">
-              <span class="glyphicon glyphicon-tags"></span>
-              {{post.hashtag}}
-           </div>
-           <div class="row border">
-              {{post.title}}
-           </div>
-           <div class="row border">
-              {{post.address}}
-           </div>
-        </div>
+        <div class="col-md-3" ng-repeat="post in posts">
+          
+          <div class="browseItem">
+            <div>
+              <img class="browseImage" src="https://weeklygrist.files.wordpress.com/2011/06/joe3793.jpg"></img>
+            </div>  
+            <div class="browseHashTag">
+                <span class="glyphicon glyphicon-tags"></span>
+                {{post.hashtag}}
+            </div>
+
+            <div class="browseTitle">
+                <strong>{{post.title}}</strong>
+            </div>
+              <div class="browseAddress">
+                {{post.address}}
+               </div>
+          </div>
+
+
+      </div>
       </div>
     </div>
 

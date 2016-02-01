@@ -1,3 +1,7 @@
+body, html {
+   background: none;
+}
+
 /* ENABLING CUSTOM FONTS*/
 @font-face {
     font-family: 'Seravek';
@@ -141,16 +145,33 @@ input[type="password"] {
 	text-align: center;
 }
 .browseItem {
-	border: 1px solid #000000;
+	/*box-shadow: 10px 10px 5px #888888;*/
+	border-radius: 10px;
+	border: 4px solid #888888;
+	margin-bottom: 30px;
 }
 .browseImage {
 	width: 100%;
-	
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 4px solid #888888;
 }
-.border {
-	border-top: 1px solid #000000;
+.browseHashTag {
+	text-align: left;
+	margin-left: 10px !important;
+	margin-top: 10px !important;
+	margin-bottom: 10px;
 }
-.bottomMargin {
-	margin: 20px 20px 20px 20px;
+.browseTitle {
+	text-align: center !important;
+	text-decoration: bold !important;
+}
+.browseAddress {
+	text-align: right !important;
+	margin-top: 10px;
+	margin-right: 5px;
+	color: #009d3a;
+}
+.glyphicon-tags {
+	margin-right: 5px;
 }
 
